@@ -7,9 +7,8 @@ class User < ApplicationRecord
     # validates :batch, presence: true
     validates :email, presence: true
     # validates :student, presence: true
-    # validates :admin, presence: true
 
 
-  
+
 
 end

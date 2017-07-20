@@ -1,11 +1,16 @@
 
-
+<% if !user_signed_in? %>
+  <div class="jumbotron">
+    <h1> Welcome to our MatchingUp App </h1>
+      <p>Please log in or sign up from our navigation bar
+  </div>
+<% end %>
 
 <% if user_signed_in? && current_user.student? %>
     <%= render 'users/student' %>
-  <% end %>
+<% end %>
 
 
   <% if user_signed_in? && !current_user.student? %>
     <%= render 'users/admin' %>
-    <% end %>
+  <% end %>
