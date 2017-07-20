@@ -1,13 +1,12 @@
 class UsersController < ApplicationController
 
-  def student
-    @users = User.all
-  end
-
-
   def show
     @user = User.find(params[:id])
   end
 
+  def toggle_student
+   self.student = !self.student
+   self.save!
+  end
 
 end

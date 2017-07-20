@@ -1,1 +1,5 @@
 <p> Hello Admin </p>
+<% @users.each do |user| %>
+  <li><%= user.full_name %></li>
+  <%=  %><%= button_to "Change Role" %>
+  <% end %>
