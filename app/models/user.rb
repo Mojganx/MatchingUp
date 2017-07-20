@@ -8,7 +8,6 @@ class User < ApplicationRecord
     validates :email, presence: true
 #    validates :student, presence: true
 
-
-
+scope :only_students, -> { where(student: true) }
 
 end

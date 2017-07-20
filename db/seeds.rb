@@ -47,3 +47,11 @@ lucy =   User.create! ( {
    batch: 9,
    student: true
     } )
+
+  mike = User.create! ( {
+     full_name: "Mike D",
+     email: "mike@mail.com",
+     password: "qwerty",
+     batch: 9,
+     student: true
+      } )
