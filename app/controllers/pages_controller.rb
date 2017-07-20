@@ -1,4 +1,24 @@
 class PagesController < ApplicationController
+
+  def home
+    @users = User.all
+  end
+
+  def show
+    @user = User.find(params[:id])
+  end
+
+  def promote
+    @users = User.find params[:id]
+    @users.update( :student => false )
+      redirect_to root_path
+  end
+
+  def demote
+    @users = User.find params[:id]
+    @users.update( :student => true )
+      redirect_to root_path
+  end
   # def home
   #   if student?
   #     # @pair = ...
@@ -9,16 +29,4 @@ class PagesController < ApplicationController
   #   end
   # end
 
-  def home
-    @users = User.all
-  end
-
-  def show
-    @user = User.find(params[:id])
-  end
-
-  def toggle_student
-   self.student = !self.student
-   self.save!
-  end
 end
