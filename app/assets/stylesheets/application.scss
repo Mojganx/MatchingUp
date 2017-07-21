@@ -1,11 +1,31 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.panel-transparent {
+  background: none;
+}
+
+.panel-transparent .panel-heading {
+  background: rgba(122, 130, 136, 0.2)!important;
+}
+
+.panel-transparent .panel-body {
+  background: rgba(46, 51, 56, 0.2)!important;
+}
 
 body {
-  background-image: url("https://i.ytimg.com/vi/hPCotoawhk0/maxresdefault.jpg")
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #7094db;
+  background-image: url("https://i.ytimg.com/vi/hPCotoawhk0/maxresdefault.jpg");
 }
 
 .navbar {
-  background-image: url("https://i.ytimg.com/vi/hPCotoawhk0/maxresdefault.jpg")
+  border: 1px solid #7094db;
+  background-image: url("https://i.ytimg.com/vi/hPCotoawhk0/maxresdefault.jpg");
+}
+
+.button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  cursor: hand;
 }
