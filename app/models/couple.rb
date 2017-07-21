@@ -1,4 +1,5 @@
 class Couple < ApplicationRecord
+  has_many :users
   # Removed admins from users
       def student_array
         @students1 = []
@@ -21,6 +22,6 @@ class Couple < ApplicationRecord
       end
     #
       def generate_all_couples
-        
+
 
 end
