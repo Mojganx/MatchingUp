@@ -4,6 +4,7 @@
     <h3 class="panel-title">Hello Admin --- Overview of Pairs for the day!</h3>
     <button type="button" class="btn btn-default"><%= link_to "Random generate new couples", generator_path, method: :get %></button>
     <table class="table">
+      <li><%= @couples %></li>
     </table>
   </div>
     <div class="panel-heading">

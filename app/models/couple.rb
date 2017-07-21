@@ -1,5 +1,13 @@
 class Couple < ApplicationRecord
   belongs_to :user
+
+  def self.generate_pairs
+    3.times do
+      @a = @students_id.sample(2)
+      @pairs << @a
+  #  print "I am here"
+    end
+  end
   # Removed admins from users
   def student_array
     @students1 = []
@@ -7,7 +15,7 @@ class Couple < ApplicationRecord
     @students1 << @selected_students
   end
   # creating an array with only the ID
-  def student_id
+  def self.student_id
     @students_id = @students1.pluck(:id).to_a
   end
   # make a new couples array and shovel sample from student_id array times two in it
@@ -17,6 +25,7 @@ class Couple < ApplicationRecord
     @a = @students_id.sample(2)
     @pairs << @a
    #find the names again e.g. pluck(:full_name)
+    end
   end
   #we take the values of pair array out of students_id array
   def old_couple
@@ -27,6 +36,4 @@ class Couple < ApplicationRecord
   def generate_all_couples
 
   end
-
-
 end

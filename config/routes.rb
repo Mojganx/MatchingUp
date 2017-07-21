@@ -7,4 +7,6 @@ Rails.application.routes.draw do
    put 'student/:id/demote' => 'pages#demote', :as => "demote"
    get 'student/' => 'pages#couple_generator', :as => 'generator'
 
+   resources :couples
+
 end
