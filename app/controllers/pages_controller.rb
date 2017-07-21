@@ -8,6 +8,11 @@ class PagesController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def couple_generator
+    
+      redirect_to root_path
+  end
+
   def promote
     @users = User.find params[:id]
     @users.update( :student => false )
